@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha do nova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Batalha do nova</h1>
+    </header>
+
+    
+    <div class="container" >
+
+        <a href="https://www.instagram.com/batalhadonova_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+        target="_blank" 
+        class="fixed-button instagram">
+            Instagram 
+        </a>
+
+        <a href="https://discord.gg/YGKygfY7" 
+        target="_blank" 
+        class="fixed-button discord">
+            Discord
+        </a>
+
+        <a href="" 
+        target="_blank"
+        class="fixed-button eventos">
+        Eventos
+
+    </a>
+
+        <button 
+        class="fixed-button ranking"
+        onclick="toggleRanking()">
+        
+        Ranking dos Mcs
+        </button>
+        <a href=""
+        target="_blank"
+        class="fixed-button loja">
+        Loja
+    </a>
+
+        <button
+        class="fixed-button edicao"
+        onclick="toggleEdicao">
+
+        Edição Atual
+    </button>
+
+   
+
+        <section class="info-section">
+            <div class="info-item" onclick="toggleInfo(this)">
+                <strong>Endereço</strong>
+                <div class="info-content">Av dos Imigrantes, Praça do Retiro</div>
+            </div>
+            <div class="info-item" onclick="toggleInfo(this)">
+                <strong>Horario</strong>
+                <div class="info-content">31/05/2025 às 19h</div>
+            </div>
+        </section>
+
+         <div id="ranking-section" class="ranking-section" style="display: none;">
+
+        <h2>Ranking dos Mcs</h2>
+
+        
+    </div>
+    
+    </div>
+    
+    <script src="script.js"></script>
+    </body>
+</html>

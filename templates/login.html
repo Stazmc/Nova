@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login dos MCs - Batalha do Nova</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Login dos MCs</h2>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+              {% for msg in messages %}
+                <li style="color: red; margin-bottom: 10px;">{{ msg }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        <!-- Formulário de login -->
+        <form method="POST" action="{{ url_for('login') }}">
+            <input type="text" name="username" placeholder="Seu Vulgo:" required>
+            <input type="password" name="password" placeholder="Sua senha:" required>
+            <button type="submit">ENTRAR</button>
+        </form>
+
+        <hr style="margin: 30px 0; border-color: #444;">
+
+        <h3>Não tem cadastro? Crie seu Vulgo!</h3>
+        <!-- Formulário de cadastro -->
+        <form method="POST" action="{{ url_for('register') }}">
+            <input type="text" name="username" placeholder="Novo Vulgo:" required>
+            <input type="password" name="password" placeholder="Nova senha:" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
